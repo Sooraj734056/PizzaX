@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <a href="#"><svg width="24" height="24" viewBox="0 0 24 24"><path d="..."/></svg></a>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PizzaX - Home</title>
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/home.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo">🍕 PizzaX</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html" class="active">Login</a></li>
+        <li><a href="cart.html" class="cart-btn">🛒 Cart</a></li>
+      </ul>
+      </nav>
+      <div class="nav-actions">
+        <a href="user.html" class="icon-btn" aria-label="User">👤</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO (bg image + overlay + text on top) -->
+  <section class="hero" aria-label="PizzaX Hero">
+    <div class="hero-overlay"></div>
+    <!-- 👇 yaha apni BG image ka path set karo (CSS me) -->
+    <div class="hero-content container">
+      <div class="hero-copy">
+        <h1><span>Hot. Fresh. </span>Delicious Pizza.</h1>
+        <p>Stone-baked goodness delivered lightning fast. Taste the difference with premium ingredients.</p>
+        <div class="hero-cta">
+          <a href="menu.html" class="btn btn-primary">Order Now</a>
+          <a href="about.html" class="btn btn-ghost">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PIZZA SELECTOR SLIDER -->
+  <section class="selector container" aria-label="Popular Picks">
+    <h2 class="section-title">Pick Your Favorite</h2>
+    <div class="slider">
+      <button class="slide-btn prev" aria-label="Previous">‹</button>
+      <div class="track" id="pizzaTrack">
+        <!-- 10 items for smooth slide -->
+        <div class="chip"><img src="images/pizza1.jpg" alt="Pizza 1"><span>Margherita</span></div>
+        <div class="chip"><img src="images/pizza2.jpg" alt="Pizza 2"><span>Pepperoni</span></div>
+        <div class="chip"><img src="images/pizza3.jpg" alt="Pizza 3"><span>Veggie</span></div>
+        <div class="chip"><img src="images/pizza4.jpg" alt="Pizza 4"><span>BBQ</span></div>
+        <div class="chip"><img src="images/pizza5.jpg" alt="Pizza 5"><span>Cheese Burst</span></div>
+        <div class="chip"><img src="images/pizza6.jpg" alt="Pizza 6"><span>Farmhouse</span></div>
+        <div class="chip"><img src="images/pizza7.jpg" alt="Pizza 7"><span>Mexican</span></div>
+        <div class="chip"><img src="images/pizza8.jpg" alt="Pizza 8"><span>Paneer</span></div>
+        <div class="chip"><img src="images/pizza9.jpg" alt="Pizza 9"><span>Tandoori</span></div>
+        <div class="chip"><img src="images/pizza10.jpg" alt="Pizza 10"><span>Supreme</span></div>
+      </div>
+      <button class="slide-btn next" aria-label="Next">›</button>
+    </div>
+  </section>
+
+  <!-- FEATURED -->
+  <section class="featured container" aria-label="Top Picks">
+    <div class="section-head">
+      <h2 class="section-title">Our Top Picks</h2>
+      <a href="menu.html" class="link">View full menu →</a>
+    </div>
+    <div class="grid">
+      <article class="card">
+        <img src="images/pizza1.jpg" alt="Margherita">
+        <div class="card-body">
+          <h3>Margherita</h3>
+          <p>Classic cheese & tomato with basil.</p>
+          <div class="card-actions">
+            <span class="price">₹299</span>
+            <a href="menu.html" class="btn sm">Customize</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <img src="images/pizza2.jpg" alt="Pepperoni">
+        <div class="card-body">
+          <h3>Pepperoni</h3>
+          <p>Loaded with spicy pepperoni & mozzarella.</p>
+          <div class="card-actions">
+            <span class="price">₹399</span>
+            <a href="menu.html" class="btn sm">Customize</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <img src="images/pizza3.jpg" alt="Veggie Delight">
+        <div class="card-body">
+          <h3>Veggie Delight</h3>
+          <p>Garden fresh veggies with extra cheese.</p>
+          <div class="card-actions">
+            <span class="price">₹349</span>
+            <a href="menu.html" class="btn sm">Customize</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <img src="images/pizza4.jpg" alt="BBQ Chicken">
+        <div class="card-body">
+          <h3>BBQ Chicken</h3>
+          <p>Smoky BBQ sauce with juicy chicken.</p>
+          <div class="card-actions">
+            <span class="price">₹449</span>
+            <a href="menu.html" class="btn sm">Customize</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+<!-- OFFERS -->
+<section class="offers" aria-label="Special Offers">
+  <div class="container">
+    <h2 class="section-title">Special Offers</h2>
+    <div class="grid">
+      <div class="offer-card">
+        <img src="images/offer1.jpg" alt="Buy 1 Get 1" class="offer-img">
+        <h3>Buy 1 Get 1</h3>
+        <p>On Margherita every Friday.</p>
+        <a href="menu.html" class="btn sm">Grab Deal</a>
+      </div>
+      <div class="offer-card">
+        <img src="images/offer2.jpg" alt="50% OFF" class="offer-img">
+        <h3>50% OFF</h3>
+        <p>Pepperoni all weekend long.</p>
+        <a href="menu.html" class="btn sm">Grab Deal</a>
+      </div>
+      <div class="offer-card">
+        <img src="images/offer3.jpg" alt="Combo @ ₹599" class="offer-img">
+        <h3>Combo @ ₹599</h3>
+        <p>Medium Pizza + Garlic Bread + Drink.</p>
+        <a href="menu.html" class="btn sm">Grab Deal</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- TESTIMONIALS -->
+<section class="testimonials container" aria-label="Reviews">
+  <h2 class="section-title">What Our Customers Say</h2>
+  <div class="t-grid">
+    <div class="t-card">
+      <div class="t-img">
+        <img src="images/suraj.jpg" alt="Aditi">
+      </div>
+      <p>“Fast delivery and amazing taste! My go-to pizza place.”</p>
+      <span>— Suraj</span>
+    </div>
+    <div class="t-card">
+      <div class="t-img">
+        <img src="images/ashish.webp" alt="Rohan">
+      </div>
+      <p>“Cheese burst was insane. Loved the crust!”</p>
+      <span>— Ashish</span>
+    </div>
+    <div class="t-card">
+      <div class="t-img">
+        <img src="images/sumit.jpg" alt="Meera">
+      </div>
+      <p>“Fresh toppings, perfect spice. Highly recommended.”</p>
+      <span>— Sumit</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- NEWSLETTER -->
+<section class="newsletter" aria-label="Subscribe">
+  <div class="container n-wrap">
+    <div class="n-copy">
+      <h3>Get exclusive deals in your inbox</h3>
+      <p>Subscribe to never miss offers and new launches.</p>
+    </div>
+    <form id="newsletter-form" class="n-form">
+      <input type="email" placeholder="Enter your email" required />
+      <button type="submit" class="btn subscribe-btn">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-container">
+    
+    <!-- About Us -->
+    <div class="footer-about">
+      <h4>About PizzaX</h4>
+      <p>Fresh, stone-baked pizzas crafted with premium ingredients and delivered fast.</p>
+      <p>Owner:- Suraj Sharma </p>
+    </div>
+
+    <!-- Instagram Feed -->
+    <div class="footer-insta">
+      <h4>Instagram Feed</h4>
+      <div class="insta-grid">
+        <img src="images/offer1.jpg" alt="Insta 1">
+        <img src="images/offer2.jpg" alt="Insta 2">
+        <img src="images/offer3.jpg" alt="Insta 3">
+        <img src="images/pizza10.jpg" alt="Insta 4">
+        <img src="images/pizza5.jpg" alt="Insta 4">
+        <img src="images/pizza3.jpg" alt="Insta 4">
+        <img src="images/pizza2.jpg" alt="Insta 4">
+        <img src="images/pizza1.jpg" alt="Insta 4">
+      </div>
+    </div>
+
+    <!-- Social Icons -->
+    <div class="footer-social">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="#" target="_blank"><img src="images/instagram.png" alt="Instagram"></a>
+        <a href="#" target="_blank"><img src="images/facebook.png" alt="Facebook"></a>
+        <a href="#" target="_blank"><img src="images/twitter.png" alt="Twitter"></a>
+      </div>
+    </div>
+    
+  </div>
+
+
+  <!-- Footer Bottom -->
+  <div class="footer-bottom">
+    © 2025 PizzaX. All rights reserved.
+  </div>
+</footer>
+
+
+  <!-- SCRIPTS -->
+  <script src="js/main.js"></script>
+  <script>
+    // Navbar shadow on scroll
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 10) navbar.classList.add('scrolled');
+      else navbar.classList.remove('scrolled');
+    });
+
+    // Simple horizontal slider
+    const track = document.getElementById('pizzaTrack');
+    const prev = document.querySelector('.slide-btn.prev');
+    const next = document.querySelector('.slide-btn.next');
+
+    const scrollByAmount = () => track.clientWidth * 0.6;
+    prev.addEventListener('click', () => track.scrollBy({ left: -scrollByAmount(), behavior: 'smooth' }));
+    next.addEventListener('click', () => track.scrollBy({ left:  scrollByAmount(), behavior: 'smooth' }));
+
+    // Auto-scroll (optional)
+    let auto = setInterval(() => { track.scrollBy({ left: 220, behavior: 'smooth' }); }, 3000);
+    track.addEventListener('mouseenter', () => clearInterval(auto));
+    track.addEventListener('mouseleave', () => { auto = setInterval(() => track.scrollBy({ left: 220, behavior: 'smooth' }), 3000); });
+
+    // Newsletter dummy submit
+    document.getElementById('newsletter-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Thanks for subscribing!');
+      e.target.reset();
+    });
+  </script>
+</body>
+</html>

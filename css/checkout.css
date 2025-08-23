@@ -1,0 +1,18 @@
+.checkout-section {
+  padding: 50px 20px;
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
+}
+.checkout-section input {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: none;
+}
+.checkout-section button {
+  width: 100%;
+  padding: 12px;
+}

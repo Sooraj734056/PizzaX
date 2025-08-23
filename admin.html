@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - PizzaX</title>
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo">🍕 PizzaX</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html" class="active">Login</a></li>
+        <li><a href="cart.html" class="cart-btn">🛒 Cart</a></li>
+      </ul>
+      </nav>
+      <div class="nav-actions">
+        <a href="user.html" class="icon-btn" aria-label="User">👤</a>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ADMIN DASHBOARD -->
+  <section class="dashboard-section">
+    <h2 class="section-title">Admin Panel</h2>
+
+    <!-- MANAGE PIZZAS -->
+    <div class="manage-pizzas">
+      <h3>Manage Pizzas</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Pizza ID</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>001</td>
+            <td>Margherita</td>
+            <td>₹299</td>
+            <td>
+              <button class="btn edit-btn">Edit</button>
+              <button class="btn delete-btn">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td>002</td>
+            <td>Pepperoni</td>
+            <td>₹399</td>
+            <td>
+              <button class="btn edit-btn">Edit</button>
+              <button class="btn delete-btn">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- VIEW ORDERS -->
+    <div class="view-orders">
+      <h3>Orders</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Order ID</th>
+            <th>User</th>
+            <th>Pizza</th>
+            <th>Quantity</th>
+            <th>Total</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>001</td>
+            <td>John Doe</td>
+            <td>Margherita</td>
+            <td>2</td>
+            <td>₹598</td>
+            <td>Delivered</td>
+          </tr>
+          <tr>
+            <td>002</td>
+            <td>Jane Smith</td>
+            <td>Pepperoni</td>
+            <td>1</td>
+            <td>₹399</td>
+            <td>Pending</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 PizzaX. All rights reserved.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

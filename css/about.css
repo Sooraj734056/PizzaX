@@ -1,0 +1,116 @@
+.about-section {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+.about-section p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-top: 20px;
+}
+/* Footer Container */
+.footer-container {
+  display: flex;
+  justify-content: space-around; 
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* About Us Section */
+.footer-about,
+.footer-insta,
+.footer-social {
+  flex: 1;
+  min-width: 200px;
+}
+
+/* Headings */
+.footer-about h4,
+.footer-insta h4,
+.footer-social h4 {
+  color: var(--accent-2); /* gold */
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+/* About text */
+.footer-about p {
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+/* Instagram Feed */
+.footer-insta .insta-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 images per row */
+  gap: 6px;
+ margin-right: 40px;
+}
+
+.footer-insta .insta-grid img {
+  width: 100%;
+  height: 50px; /* aur chhoti images */
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* Social Links */
+.footer-social {
+  display: flex;
+  flex-direction: column; /* Heading upar, icons neeche */
+  align-items: flex-start; /* left aligned inside its column */
+  gap: 20px; /* heading aur icons ke beech thoda gap */
+}
+
+.footer-social h4 {
+  margin: 0;
+  color: var(--accent-2);
+  font-size: 1.1rem;
+}
+
+.footer-social .social-icons {
+  display: flex;
+  gap: 20px; /* icons ke beech space */
+  margin-top: 0; /* extra margin remove */
+}
+
+.footer-social .social-icons img {
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.footer-social .social-icons img:hover {
+  transform: scale(1.1);
+}
+
+
+
+/* Footer bottom */
+.footer-bottom {
+  text-align: center;
+  padding: 10px 0;
+  color: #a4a8b1;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  margin-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 5024px) {
+  .footer-container {
+    gap: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-insta {
+    margin-right: 0; /* Mobile me margin remove ho jaye taki alignment bigde na */
+  }
+}
+@media (max-width: 480px) {
+  .footer-insta .insta-grid {
+    grid-template-columns: 1fr;
+  }
+}

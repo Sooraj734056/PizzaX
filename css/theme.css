@@ -1,0 +1,234 @@
+/* ---------------------------
+    GLOBAL RESET & BASE
+--------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #121212;
+  color: #fff;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* ---------------------------
+    LINKS & BUTTONS
+--------------------------- */
+a {
+  color: #FFD700;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+a:hover {
+  color: #e6c200;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #FFD700;
+  color: #222;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+.btn:hover {
+  background: #e6c200;
+  transform: translateY(-2px);
+}
+/* ---------------------------
+    NAVBAR
+--------------------------- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background: #111;
+  position: relative;
+  z-index: 999;
+  transition: all 0.3s;
+}
+.navbar .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #FFD700;
+}
+.navbar nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+.navbar nav ul li a {
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+.navbar nav ul li a.active,
+.navbar nav ul li a:hover {
+  background: #222;
+  color: #FFD700;
+}
+
+/* Sticky Navbar */
+.navbar.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #111;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+/* ---------------------------
+    HEADINGS & SECTIONS
+--------------------------- */
+h1, h2, h3, h4 {
+  color: #FFD700;
+}
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Section padding */
+section {
+  padding: 50px 20px;
+}
+
+/* ---------------------------
+    FOOTER
+--------------------------- */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #111;
+  color: #777;
+  margin-top: 50px;
+}
+
+/* ---------------------------
+    FORM ELEMENTS
+--------------------------- */
+input, textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  margin-bottom: 15px;
+  width: 100%;
+  background: #222;
+  color: #fff;
+}
+input::placeholder,
+textarea::placeholder {
+  color: #aaa;
+}
+textarea {
+  resize: none;
+}
+
+/* ---------------------------
+    CARDS & GRID
+--------------------------- */
+.menu-grid,
+.blog-grid,
+.cart-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.menu-card,
+.blog-card,
+.cart-item,
+.pizza-card {
+  background: #222;
+  border-radius: 15px;
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.menu-card:hover,
+.blog-card:hover,
+.pizza-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(255, 215, 0, 0.3);
+}
+.menu-card img,
+.blog-card img,
+.pizza-card img,
+.cart-item img {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+/* ---------------------------
+    TABLES (Dashboard / Cart)
+--------------------------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+}
+th, td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #555;
+}
+th {
+  background: #333;
+  color: #FFD700;
+}
+tr:hover {
+  background: #2a2a2a;
+}
+
+/* ---------------------------
+    ANIMATIONS & EFFECTS
+--------------------------- */
+/* Scroll animation */
+.animate {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  transition: all 0.8s ease-out;
+}
+.section-title, .menu-card, .blog-card, .cart-item {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+/* Add-to-cart button animation */
+.add-cart {
+  position: relative;
+  transition: transform 0.2s;
+}
+.add-cart:active {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* ---------------------------
+    RESPONSIVE
+--------------------------- */
+@media screen and (max-width: 768px){
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+  }
+  .navbar nav ul {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+  section {
+    padding: 40px 15px;
+  }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - PizzaX</title>
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/checkout.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo">🍕 PizzaX</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html" class="active">Login</a></li>
+        <li><a href="cart.html" class="cart-btn">🛒 Cart</a></li>
+      </ul>
+      </nav>
+      <div class="nav-actions">
+        <a href="user.html" class="icon-btn" aria-label="User">👤</a>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- CHECKOUT SECTION -->
+  <section class="checkout-section">
+    <h2 class="section-title">Checkout</h2>
+    <form id="checkout-form">
+      <input type="text" placeholder="Full Name" required>
+      <input type="text" placeholder="Address" required>
+      <input type="tel" placeholder="Contact Number" required>
+      <input type="text" placeholder="Payment Info (Dummy)" required>
+      <button type="submit" class="btn">Place Order</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 PizzaX. All rights reserved.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/checkout.js"></script>
+  <script>
+    document.getElementById("checkout-form").addEventListener("submit", function(e){
+      e.preventDefault();
+      alert("Order placed successfully! 🍕");
+    });
+  </script>
+</body>
+</html>

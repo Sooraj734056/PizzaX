@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart - PizzaX</title>
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/cart.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo">🍕 PizzaX</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html" class="active">Login</a></li>
+        <li><a href="cart.html" class="cart-btn">🛒 Cart</a></li>
+      </ul>
+      </nav>
+      <div class="nav-actions">
+        <a href="user.html" class="icon-btn" aria-label="User">👤</a>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- CART SECTION -->
+  <section class="cart-section">
+    <h2 class="section-title">Your Cart</h2>
+    <div class="cart-items">
+      <!-- Example Cart Item -->
+      <div class="cart-item">
+        <img src="images/pizza1.jpg" alt="Margherita">
+        <div class="cart-info">
+          <h3>Margherita</h3>
+          <span class="price">₹299</span>
+          <input type="number" value="1" min="1" class="quantity">
+        </div>
+        <button class="remove-btn">Remove</button>
+      </div>
+      <div class="cart-item">
+        <img src="images/pizza2.jpg" alt="Pepperoni">
+        <div class="cart-info">
+          <h3>Pepperoni</h3>
+          <span class="price">₹399</span>
+          <input type="number" value="1" min="1" class="quantity">
+        </div>
+        <button class="remove-btn">Remove</button>
+      </div>
+    </div>
+    <div class="cart-summary">
+      <h3>Total: ₹<span id="total-price">698</span></h3>
+      <a href="checkout.html" class="btn">Proceed to Checkout</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 PizzaX. All rights reserved.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+</html>

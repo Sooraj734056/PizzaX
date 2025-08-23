@@ -1,0 +1,542 @@
+/* Base helpers */
+:root{
+  --bg: #0b0b0e;
+  --bg-2: #121218;
+  --card: #1b1b23;
+  --text: #ffffff;
+  --muted: #b9bcc4;
+  --accent: #22c55e; /* green */
+  --accent-2:#FFD700; /* gold (optional highlights) */
+  --glass: rgba(255,255,255,0.06);
+  --shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+*{ box-sizing: border-box }
+body{ background: var(--bg); color: var(--text); }
+.container{ max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.section-title{ font-size: 1.8rem; margin-bottom: 18px }
+
+/* Buttons & links */
+.btn{
+  display:inline-block; padding:12px 22px; border-radius: 28px;
+  background: var(--glass); color: var(--text); text-decoration:none;
+  border:1px solid rgba(255,255,255,0.12); transition:.25s transform, .25s background;
+}
+.btn:hover{ transform: translateY(-2px); background: rgba(255,255,255,0.12); }
+.btn-primary{ background: var(--accent); color:#001b07; border:none; font-weight: 700; }
+.btn-primary:hover{ filter: brightness(0.95); transform: translateY(-2px) }
+.btn-ghost{ background: transparent; border:1px solid rgba(255,255,255,0.2) }
+.btn.sm{ padding:9px 16px; border-radius: 10px; font-size:.95rem }
+
+.link{ color: var(--muted); text-decoration:none }
+.link:hover{ color: var(--text) }
+
+/* NAVBAR */
+.navbar {
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  width: 100%;
+  z-index: 100; 
+  backdrop-filter: blur(10px);
+  background: rgba(10,10,14,0.4); 
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  transition: .25s background, .25s box-shadow;
+}
+
+.navbar.scrolled { 
+  background: rgba(10,10,14,0.75); 
+  box-shadow: var(--shadow); 
+}
+
+.nav-inner { 
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  gap: 16px; 
+  padding: 14px 20px;
+}
+
+.logo { 
+  font-weight: 800; 
+  font-size: 1.2rem; 
+}
+
+.nav-links { 
+  list-style: none; 
+  display: flex; 
+  gap: 22px; 
+  padding: 0; 
+  margin: 0; 
+  margin-right: auto;   /* 👈 yaha se links left side chale jayenge */
+}
+
+.nav-links a { 
+  color: #e9eef6; 
+  text-decoration: none; 
+  font-weight: 500; 
+  opacity: .9; 
+}
+
+.nav-links a:hover,
+.nav-links a.active { 
+  color: var(--accent); 
+}
+
+.nav-actions { 
+  display: flex; 
+  align-items: center; 
+  gap: 10px; 
+}
+
+.icon-btn { 
+  color: #fff; 
+  text-decoration: none; 
+  font-size: 1.1rem; 
+  padding: 8px 10px; 
+  border-radius: 10px; 
+  background: transparent; 
+}
+
+.icon-btn:hover { 
+  background: rgba(255,255,255,0.08); 
+}
+
+
+
+
+
+/* HERO (background image + overlay + text on top) */
+.hero{
+  position: relative;
+  min-height: 96vh;
+  display:flex; align-items:center;
+  background: #0b0b0e; /* fallback while image loads */
+  overflow:hidden;
+}
+.hero::before{
+  /* 👇 yaha apni background image ka path do */
+  content:""; position:absolute; inset:0;
+  background: url('../images/hero-pizza.jpg') center/cover no-repeat fixed;
+  filter: saturate(1.05) contrast(1.02);
+  transform: scale(1.02);
+}
+.hero-overlay{
+  position:absolute; inset:0;
+  background: radial-gradient(80% 60% at 20% 40%, rgba(0,0,0,.15), rgba(0,0,0,.75)),
+              linear-gradient(180deg, rgba(0,0,0,.25), rgba(0,0,0,.75));
+}
+.hero-content{ position:relative; z-index:1; width:100% }
+.hero-copy{ max-width: 620px; padding-top: 90px; }
+.hero-copy h1{
+  font-size: clamp(2.2rem, 4.5vw, 4rem);
+  line-height: 1.08; margin: 0 0 12px;
+}
+.hero-copy h1 span{ color: var(--accent) }
+.hero-copy p{ color: var(--muted); font-size:1.05rem; margin-bottom: 22px; max-width: 560px }
+.hero-cta{ display:flex; gap:12px; flex-wrap:wrap }
+
+/* SELECTOR SLIDER */
+.selector{ padding: 38px 0 }
+.slider{ position: relative }
+.track{
+  display:flex; gap:16px; overflow:auto; scroll-behavior:smooth;
+  scrollbar-width:none; padding: 6px 44px;
+}
+.track::-webkit-scrollbar{ display:none }
+.chip{
+  background: var(--card); border:1px solid rgba(255,255,255,0.06);
+  border-radius: 20px; padding:10px; min-width: 160px;
+  display:flex; flex-direction:column; align-items:center; gap:8px;
+  transition:.25s transform, .25s box-shadow;
+}
+.chip img{ width:120px; height:120px; border-radius:50%; object-fit:cover }
+.chip span{ font-size:.95rem; opacity:.9 }
+.chip:hover{ transform: translateY(-4px); box-shadow: var(--shadow) }
+
+.slide-btn{
+  position:absolute; top:50%; transform: translateY(-50%);
+  width:40px; height:40px; border-radius:50%;
+  border:1px solid rgba(255,255,255,0.2); background: rgba(0,0,0,0.4);
+  color:#fff; cursor:pointer; font-size: 24px; line-height: 40px; text-align:center;
+}
+.slide-btn:hover{ background: rgba(255,255,255,0.12) }
+.slide-btn.prev{ left:0 }
+.slide-btn.next{ right:0 }
+
+/* FEATURED (cards) */
+.featured{ padding: 30px 0 10px }
+.section-head{ display:flex; justify-content:space-between; align-items:end; margin-bottom:14px }
+.grid{
+  display:grid; gap:20px;
+  grid-template-columns: repeat(4, 1fr);
+}
+.card{
+  background: var(--card); border:1px solid rgba(255,255,255,0.06); border-radius:16px;
+  overflow:hidden; transition:.25s transform, .25s box-shadow;
+}
+.card:hover{ transform: translateY(-6px); box-shadow: var(--shadow) }
+.card img{ width:100%; height:180px; object-fit:cover }
+.card-body{ padding:14px }
+.card-body h3{ margin:0 0 6px }
+.card-body p{ color: var(--muted); margin:0 0 12px; font-size:.98rem }
+.card-actions{ display:flex; align-items:center; justify-content:space-between }
+.price{ color: var(--accent-2); font-weight:700 }
+
+/* OFFERS SECTION */
+.offers {
+  background: var(--bg); /* main app background */
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.offers .section-title {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: var(--accent-2); /* gold heading */
+}
+
+.offers .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* Offer Card */
+.offer-card {
+  background: var(--card); /* card matches featured cards */
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.25s, box-shadow 0.25s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.offer-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow);
+}
+
+/* Offer Card Image */
+.offer-card img {
+  width: 100%;
+  max-height: 150px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  transition: transform 0.3s ease;
+}
+
+.offer-card img:hover {
+  transform: scale(1.05);
+}
+
+/* Offer Card Text */
+.offer-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+  color: var(--accent-2); /* gold like featured cards */
+}
+
+.offer-card p {
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+  color: var(--muted); /* muted description */
+}
+
+/* Offer Card Button */
+.offer-card .btn {
+  background: var(--accent-2); /* dark gold button */
+  color: var(--bg); /* black text on button */
+  border-radius: 8px;
+  padding: 8px 14px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+
+.offer-card .btn:hover {
+  background: #daa520; /* brighter gold hover */
+  color: var(--bg);
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .offers .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .offers .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* TESTIMONIALS */
+.testimonials {
+  padding: 40px 0 10px;
+}
+
+.t-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.t-card {
+  background: var(--card); /* existing dark card background */
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 16px;
+  padding: 18px;
+  font-style: italic;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Customer image */
+.t-card .t-img img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--accent-2); /* subtle gold border */
+}
+
+.t-card span {
+  display: block;
+  margin-top: 10px;
+  color: var(--muted); /* existing muted color */
+  font-style: normal;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .t-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .t-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* NEWSLETTER SECTION */
+.newsletter {
+  background: var(--bg); /* main app background */
+  padding: 50px 20px;
+  text-align: center;
+  border-radius: 16px;
+  margin: 40px 0;
+
+  /* Remove lines */
+  border: none;
+  box-shadow: none;
+}
+
+.newsletter .n-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.newsletter .n-copy h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: var(--accent-2); /* gold heading */
+  animation: rise 0.7s ease both 0.1s; /* text animation */
+}
+
+.newsletter .n-copy p {
+  font-size: 1rem;
+  margin: 0;
+  color: var(--muted); /* muted description */
+  max-width: 500px;
+  animation: rise 0.7s ease both 0.3s; /* text animation with delay */
+}
+
+.newsletter .n-form {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.newsletter .n-form input {
+  background: var(--card); /* card color */
+  border: 1px solid rgba(255,255,255,0.06);
+  color: var(--text);
+  padding: 12px 16px;
+  border-radius: 12px;
+  min-width: 260px;
+  font-size: 1rem;
+}
+
+.newsletter .n-form input::placeholder {
+  color: var(--muted);
+}
+
+.newsletter .subscribe-btn {
+  background: var(--accent-2); /* dark gold */
+  color: var(--bg); /* black text */
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-weight: 700;
+  border: none;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+.newsletter .subscribe-btn:hover {
+  background: #daa520; /* brighter gold */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4); /* subtle hover shadow */
+}
+
+/* Text animation keyframes */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 720px) {
+  .newsletter .n-wrap {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .newsletter .n-form {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .newsletter .n-form input {
+    width: 100%;
+  }
+
+  .newsletter .subscribe-btn {
+    width: 100%;
+  }
+}
+
+/* Footer Container */
+.footer-container {
+  display: flex;
+  justify-content: space-around; 
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* About Us Section */
+.footer-about,
+.footer-insta,
+.footer-social {
+  flex: 1;
+  min-width: 200px;
+}
+
+/* Headings */
+.footer-about h4,
+.footer-insta h4,
+.footer-social h4 {
+  color: var(--accent-2); /* gold */
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+/* About text */
+.footer-about p {
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+/* Instagram Feed */
+.footer-insta .insta-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 images per row */
+  gap: 6px;
+ margin-right: 40px;
+}
+
+.footer-insta .insta-grid img {
+  width: 100%;
+  height: 50px; /* aur chhoti images */
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* Social Links */
+.footer-social {
+  display: flex;
+  flex-direction: column; /* Heading upar, icons neeche */
+  align-items: flex-start; /* left aligned inside its column */
+  gap: 20px; /* heading aur icons ke beech thoda gap */
+}
+
+.footer-social h4 {
+  margin: 0;
+  color: var(--accent-2);
+  font-size: 1.1rem;
+}
+
+.footer-social .social-icons {
+  display: flex;
+  gap: 20px; /* icons ke beech space */
+  margin-top: 0; /* extra margin remove */
+}
+
+.footer-social .social-icons img {
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.footer-social .social-icons img:hover {
+  transform: scale(1.1);
+}
+
+
+
+/* Footer bottom */
+.footer-bottom {
+  text-align: center;
+  padding: 10px 0;
+  color: #a4a8b1;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  margin-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 5024px) {
+  .footer-container {
+    gap: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-insta {
+    margin-right: 0; /* Mobile me margin remove ho jaye taki alignment bigde na */
+  }
+}
+@media (max-width: 480px) {
+  .footer-insta .insta-grid {
+    grid-template-columns: 1fr;
+  }
+}

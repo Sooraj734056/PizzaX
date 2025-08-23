@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - PizzaX</title>
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo">🍕 PizzaX</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html" class="active">Login</a></li>
+        <li><a href="cart.html" class="cart-btn">🛒 Cart</a></li>
+      </ul>
+      </nav>
+      <div class="nav-actions">
+        <a href="user.html" class="icon-btn" aria-label="User">👤</a>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- CONTACT SECTION -->
+  <section class="contact-section">
+    <h2 class="section-title">Contact Us</h2>
+    <form id="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 PizzaX. All rights reserved.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    document.getElementById("contact-form").addEventListener("submit", function(e){
+      e.preventDefault();
+      alert("Thank you! Your message has been sent.");
+      this.reset();
+    });
+  </script>
+</body>
+</html>
