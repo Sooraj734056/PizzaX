@@ -65,8 +65,20 @@ document.querySelectorAll('.pizza-card .btn.add-cart').forEach(button => {
 addToCartPopup.addEventListener('click', () => {
   const size = document.getElementById('pizza-size').value;
   const extraCheese = document.getElementById('extra-cheese').checked;
-  const price = popupPriceValue.textContent;
+  const price = parseInt(popupPriceValue.textContent);
+  const title = popupTitle.textContent;
+  const imgSrc = popupImg.src;
 
-  alert(`Added ${popupTitle.textContent} (${size}${extraCheese ? ', Extra Cheese' : ''}) - ₹${price} to cart!`);
+  // Get existing cart items from localStorage
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+  // Add new pizza to cart
+  cart.push({ title, imgSrc, price, size, extraCheese, qty: 1 });
+
+  // Save back to localStorage
+  localStorage.setItem('cart', JSON.stringify(cart));
+
+  alert(`Added ${title} (${size}${extraCheese ? ', Extra Cheese' : ''}) - ₹${price} to cart!`);
+
   popup.style.display = 'none';
 });

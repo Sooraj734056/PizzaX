@@ -13,7 +13,6 @@
 <header class="navbar">
   <div class="logo">🍕 PizzaX</div>
 
-  <!-- Right Side Icons -->
   <div class="navbar-icons">
     <a href="search.html" class="icon-btn" aria-label="Search">🔍</a>
     <a href="cart.html" class="icon-btn" aria-label="Cart">🛒</a>
@@ -36,32 +35,33 @@
   </ul>
 </div>
 
+<!-- CHECKOUT SECTION -->
+<section class="checkout-section">
+  <h2 class="section-title">Checkout</h2>
+  <form id="checkout-form">
+    <input type="text" placeholder="Full Name" required>
+    <input type="text" placeholder="Address" required>
+    <input type="tel" placeholder="Contact Number" required>
+    
+    <!-- Payment Method Dropdown -->
+    <label for="payment-method" style="color:#FFD700; margin-bottom:5px; display:block;">Select Payment Method:</label>
+    <select id="payment-method" required>
+      <option value="" disabled selected>Select Payment</option>
+      <option value="Card">Card</option>
+      <option value="UPI">UPI</option>
+      <option value="COD">Cash on Delivery</option>
+    </select>
+    
+    <button type="submit" class="btn">Place Order</button>
+  </form>
+</section>
 
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 PizzaX. All rights reserved.</p>
+</footer>
 
-  <!-- CHECKOUT SECTION -->
-  <section class="checkout-section">
-    <h2 class="section-title">Checkout</h2>
-    <form id="checkout-form">
-      <input type="text" placeholder="Full Name" required>
-      <input type="text" placeholder="Address" required>
-      <input type="tel" placeholder="Contact Number" required>
-      <input type="text" placeholder="Payment Info (Dummy)" required>
-      <button type="submit" class="btn">Place Order</button>
-    </form>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2025 PizzaX. All rights reserved.</p>
-  </footer>
-
-  <script src="js/main.js"></script>
-  <script src="js/checkout.js"></script>
-  <script>
-    document.getElementById("checkout-form").addEventListener("submit", function(e){
-      e.preventDefault();
-      alert("Order placed successfully! 🍕");
-    });
-  </script>
+<script src="js/main.js"></script>
+<script src="js/checkout.js"></script>
 </body>
 </html>
