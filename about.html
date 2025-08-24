@@ -9,45 +9,100 @@
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <header class="navbar">
-    <div class="logo">🍕 PizzaX</div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="menu.html">Menu</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="login.html" class="active">Login</a></li>
-        <li><a href="cart.html" class="cart-btn">🛒 Cart</a></li>
-      </ul>
-      </nav>
-      <div class="nav-actions">
-        <a href="user.html" class="icon-btn" aria-label="User">👤</a>
-      </div>
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="logo">🍕 PizzaX</div>
+  <div class="navbar-icons">
+    <a href="search.html" class="icon-btn" aria-label="Search">🔍</a>
+    <a href="cart.html" class="icon-btn" aria-label="Cart">🛒</a>
+    <button id="menu-toggle" class="icon-btn" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<!-- SIDE MENU -->
+<div class="side-menu">
+  <span class="close-btn">&times;</span>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="menu.html">Menu</a></li>
+    <li><a href="about.html" class="active">About</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="login.html">Login</a></li>
+    <li><a href="register.html">Register</a></li>
+    <li><a href="user.html">👤 Profile</a></li>
+  </ul>
+</div>
+
+<!-- HERO SECTION -->
+<section class="about-hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content container">
+    <h1>About PizzaX</h1>
+    <p>Fresh, stone-baked pizzas crafted with love and premium ingredients</p>
+  </div>
+</section>
+
+<!-- ABOUT DETAILS -->
+<section class="about-details container">
+  <div class="about-text">
+    <h2>Our Story</h2>
+    <p>PizzaX started with a simple mission: deliver happiness through every slice. We use the finest ingredients, bake each pizza to perfection, and ensure every bite is a burst of flavor. Our passion for quality and taste drives us to constantly innovate and create delightful pizzas for our customers.</p>
+  </div>
+  <div class="about-image">
+    <img src="images/pizza-oven.jpg" alt="Pizza Oven">
+  </div>
+</section>
+
+<!-- MISSION / VALUES -->
+<section class="mission-values container">
+  <h2>Our Mission & Values</h2>
+  <div class="values-grid">
+    <div class="value-card">
+      <h3>Quality Ingredients</h3>
+      <p>Only the freshest ingredients for the perfect taste.</p>
     </div>
-  </header>
+    <div class="value-card">
+      <h3>Fast Delivery</h3>
+      <p>Your pizza delivered hot & fresh, every time.</p>
+    </div>
+    <div class="value-card">
+      <h3>Customer Happiness</h3>
+      <p>Our priority is smiles on every face we serve.</p>
+    </div>
+  </div>
+</section>
 
+<!-- CHEF TEAM -->
+<section class="chef-team container">
+  <h2>Meet Our Chefs</h2>
+  <div class="chefs-grid">
+    <div class="chef-card">
+      <img src="images/suraj.jpg" alt="Chef Suraj">
+      <h3>Suraj Sharma</h3>
+      <p>Head Chef & Founder – Expert in classic & gourmet pizzas.</p>
+    </div>
+    <div class="chef-card">
+      <img src="images/sumit.jpg" alt="Chef Ashish">
+      <h3>Ashish Kumar</h3>
+      <p>Master Pizza Maker – Crafting perfect crusts since 2015.</p>
+    </div>
+    <div class="chef-card">
+      <img src="images/ashish.webp" alt="Chef Meera">
+      <h3>Meera Singh</h3>
+      <p>Chef de Cuisine – Creating innovative flavor combinations.</p>
+    </div>
+  </div>
+</section>
 
-  <!-- ABOUT SECTION -->
-  <section class="about-section">
-    <h2 class="section-title">About PizzaX</h2>
-    <p>PizzaX brings you authentic, fresh, and delicious pizzas straight from our ovens. We focus on quality ingredients and premium taste to make every pizza a delight. Our mission is to deliver happiness through every slice!</p>
-  </section>
-
-  <!-- FOOTER -->
+<!-- FOOTER -->
 <footer class="footer">
   <div class="footer-container">
-    
-    <!-- About Us -->
     <div class="footer-about">
       <h4>About PizzaX</h4>
       <p>Fresh, stone-baked pizzas crafted with premium ingredients and delivered fast.</p>
-      <p>Owner:- Suraj Sharma </p>
+      <p>Owner: Suraj Sharma</p>
     </div>
-
-    <!-- Instagram Feed -->
     <div class="footer-insta">
       <h4>Instagram Feed</h4>
       <div class="insta-grid">
@@ -55,33 +110,20 @@
         <img src="images/offer2.jpg" alt="Insta 2">
         <img src="images/offer3.jpg" alt="Insta 3">
         <img src="images/pizza10.jpg" alt="Insta 4">
-        <img src="images/pizza5.jpg" alt="Insta 4">
-        <img src="images/pizza3.jpg" alt="Insta 4">
-        <img src="images/pizza2.jpg" alt="Insta 4">
-        <img src="images/pizza1.jpg" alt="Insta 4">
       </div>
     </div>
-
-    <!-- Social Icons -->
     <div class="footer-social">
       <h4>Follow Us</h4>
       <div class="social-icons">
-        <a href="#" target="_blank"><img src="images/instagram.png" alt="Instagram"></a>
-        <a href="#" target="_blank"><img src="images/facebook.png" alt="Facebook"></a>
-        <a href="#" target="_blank"><img src="images/twitter.png" alt="Twitter"></a>
+        <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+        <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
       </div>
     </div>
-    
   </div>
-
-
-  <!-- Footer Bottom -->
-  <div class="footer-bottom">
-    © 2025 PizzaX. All rights reserved.
-  </div>
+  <div class="footer-bottom">© 2025 PizzaX. All rights reserved.</div>
 </footer>
 
-
-  <script src="js/main.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

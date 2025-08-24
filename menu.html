@@ -9,149 +9,138 @@
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <header class="navbar">
-    <div class="logo">🍕 PizzaX</div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="menu.html" class="active">Menu</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="login.html">Login</a></li>
-        <li><a href="cart.html" class="cart-btn">🛒 Cart</a></li>
-      </ul>
-    </nav>
-    <div class="nav-actions">
-      <a href="user.html" class="icon-btn" aria-label="User">👤</a>
-    </div>
-  </header>
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="logo">🍕 PizzaX</div>
 
-  <!-- MENU SECTION -->
-  <section class="menu-section">
-    <h2 class="section-title">Our Delicious Menu</h2>
-    <div class="menu-grid">
-      <!-- Pizza Cards (10) -->
-      <div class="pizza-card">
-        <img src="images/pizza1.jpg" alt="Margherita">
-        <h3>Margherita</h3>
-        <p>Classic delight with fresh tomatoes & cheese</p>
-        <span class="price">₹299</span>
-        <button class="btn add-cart">Customize & Add</button>
-      </div>
+  <!-- Right Side Icons -->
+  <div class="navbar-icons">
+    <a href="#" id="search-btn" class="icon-btn" aria-label="Search">🔍</a>
+    <a href="cart.html" class="icon-btn" aria-label="Cart">🛒</a>
+    <button id="menu-toggle" class="icon-btn" aria-label="Menu">☰</button>
+  </div>
+</header>
 
-      <div class="pizza-card">
-        <img src="images/pizza2.jpg" alt="Pepperoni">
-        <h3>Pepperoni</h3>
-        <p>Loaded with pepperoni & extra cheese</p>
-        <span class="price">₹399</span>
-        <button class="btn add-cart">Customize & Add</button>
-      </div>
-
-      <div class="pizza-card">
-        <img src="images/pizza3.jpg" alt="Veggie">
-        <h3>Veggie</h3>
-        <p>Fresh vegetables with tomato sauce & cheese</p>
-        <span class="price">₹349</span>
-        <button class="btn add-cart">Customize & Add</button>
-      </div>
-
-      <div class="pizza-card">
-        <img src="images/pizza4.jpg" alt="BBQ Chicken">
-        <h3>BBQ Chicken</h3>
-        <p>Grilled chicken with BBQ sauce & cheese</p>
-        <span class="price">₹449</span>
-        <button class="btn add-cart">Customize & Add</button>
-      </div>
-
-      <div class="pizza-card">
-        <img src="images/pizza5.jpg" alt="Paneer Delight">
-        <h3>Paneer Delight</h3>
-        <p>Spiced paneer toppings with cheese</p>
-        <span class="price">₹399</span>
-        <button class="btn add-cart">Customize & Add</button>
-      </div>
-
-      <div class="pizza-card">
-        <img src="images/pizza6.jpg" alt="Cheese Burst">
-        <h3>Cheese Burst</h3>
-        <p>Loaded with molten cheese inside crust</p>
-        <span class="price">₹499</span>
-        <button class="btn add-cart">Customize & Add</button>
-      </div>
-
-      <div class="pizza-card">
-        <img src="images/pizza7.jpg" alt="Mexican Green Wave">
-        <h3>Mexican Green Wave</h3>
-        <p>Spicy veggies with jalapenos & Mexican herbs</p>
-        <span class="price">₹429</span>
-        <button class="btn add-cart">Customize</button>
-      </div>
-
-      <div class="pizza-card">
-        <img src="images/pizza8.jpg" alt="Farmhouse">
-        <h3>Farmhouse</h3>
-        <p>Onions, capsicum, tomatoes & mushrooms</p>
-        <span class="price">₹379</span>
-        <button class="btn add-cart">Customize & Add</button>
-      </div>
-
-      <div class="pizza-card">
-        <img src="images/pizza9.jpg" alt="Chicken Sausage">
-        <h3>Chicken Sausage</h3>
-        <p>Juicy chicken sausages with mozzarella cheese</p>
-        <span class="price">₹459</span>
-        <button class="btn add-cart">Customize & Add</button>
-      </div>
-
-      <div class="pizza-card">
-        <img src="images/pizza10.jpg" alt="Supreme Combo">
-        <h3>Supreme Combo</h3>
-        <p>Everything you love on a single pizza</p>
-        <span class="price">₹549</span>
-        <button class="btn add-cart">Customize & Add</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- POPUP WINDOW -->
-  <div id="pizza-popup" class="popup-overlay">
-    <div class="popup-content">
-      <span class="close-btn">&times;</span>
-      <div class="popup-img"><img src="" alt="Pizza"></div>
-      <h3 class="popup-title"></h3>
-      <p class="popup-desc"></p>
-      <div class="popup-options">
-  <label>Size:
-    <select id="pizza-size">
-      <option value="Small">Small</option>
-      <option value="Medium">Medium</option>
-      <option value="Large">Large</option>
-    </select>
-  </label>
-  <label>
-    <input type="checkbox" id="extra-cheese"> Extra Cheese (+₹50)
-  </label>
+<!-- SIDE MENU -->
+<div class="side-menu">
+  <span class="close-btn">&times;</span>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="menu.html" class="active">Menu</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="login.html">Login</a></li>
+    <li><a href="register.html">Register</a></li>
+    <li><a href="user.html">👤 Profile</a></li>
+  </ul>
 </div>
-<p class="popup-price">Price: ₹<span id="popup-price-value">0</span></p>
 
-      <button class="btn" id="add-to-cart-popup">Add to Cart</button>
+<!-- SEARCH MODAL -->
+<div id="search-modal" class="search-modal">
+  <div class="search-content">
+    <span class="close-btn" id="close-search">&times;</span>
+    <input type="text" id="search-input" placeholder="Search for pizza...">
+    <div id="search-results" class="search-results"></div>
+  </div>
+</div>
+
+<!-- MENU SECTION -->
+<section class="menu-section">
+  <h2 class="section-title">Our Delicious Menu</h2>
+  <div class="menu-grid">
+    <!-- Pizza Cards -->
+    <div class="pizza-card" id="margherita">
+      <img src="images/pizza1.jpg" alt="Margherita">
+      <h3>Margherita</h3>
+      <p>Classic delight with fresh tomatoes & cheese</p>
+      <span class="price">₹299</span>
+      <button class="btn add-cart">Customize & Add</button>
+    </div>
+
+    <div class="pizza-card" id="pepperoni">
+      <img src="images/pizza2.jpg" alt="Pepperoni">
+      <h3>Pepperoni</h3>
+      <p>Loaded with pepperoni & extra cheese</p>
+      <span class="price">₹399</span>
+      <button class="btn add-cart">Customize & Add</button>
+    </div>
+
+    <div class="pizza-card" id="veggie">
+      <img src="images/pizza3.jpg" alt="Veggie">
+      <h3>Veggie</h3>
+      <p>Fresh vegetables with tomato sauce & cheese</p>
+      <span class="price">₹349</span>
+      <button class="btn add-cart">Customize & Add</button>
+    </div>
+
+    <div class="pizza-card" id="bbq">
+      <img src="images/pizza4.jpg" alt="BBQ Chicken">
+      <h3>BBQ Chicken</h3>
+      <p>Grilled chicken with BBQ sauce & cheese</p>
+      <span class="price">₹449</span>
+      <button class="btn add-cart">Customize & Add</button>
+    </div>
+
+    <div class="pizza-card" id="paneer">
+      <img src="images/pizza5.jpg" alt="Paneer Delight">
+      <h3>Paneer Delight</h3>
+      <p>Spiced paneer toppings with cheese</p>
+      <span class="price">₹399</span>
+      <button class="btn add-cart">Customize & Add</button>
+    </div>
+
+    <div class="pizza-card" id="cheeseburst">
+      <img src="images/pizza6.jpg" alt="Cheese Burst">
+      <h3>Cheese Burst</h3>
+      <p>Loaded with molten cheese inside crust</p>
+      <span class="price">₹499</span>
+      <button class="btn add-cart">Customize & Add</button>
+    </div>
+
+    <div class="pizza-card" id="mexican">
+      <img src="images/pizza7.jpg" alt="Mexican Green Wave">
+      <h3>Mexican Green Wave</h3>
+      <p>Spicy veggies with jalapenos & Mexican herbs</p>
+      <span class="price">₹429</span>
+      <button class="btn add-cart">Customize</button>
+    </div>
+
+    <div class="pizza-card" id="farmhouse">
+      <img src="images/pizza8.jpg" alt="Farmhouse">
+      <h3>Farmhouse</h3>
+      <p>Onions, capsicum, tomatoes & mushrooms</p>
+      <span class="price">₹379</span>
+      <button class="btn add-cart">Customize & Add</button>
+    </div>
+
+    <div class="pizza-card" id="chickensausage">
+      <img src="images/pizza9.jpg" alt="Chicken Sausage">
+      <h3>Chicken Sausage</h3>
+      <p>Juicy chicken sausages with mozzarella cheese</p>
+      <span class="price">₹459</span>
+      <button class="btn add-cart">Customize & Add</button>
+    </div>
+
+    <div class="pizza-card" id="supreme">
+      <img src="images/pizza10.jpg" alt="Supreme Combo">
+      <h3>Supreme Combo</h3>
+      <p>Everything you love on a single pizza</p>
+      <span class="price">₹549</span>
+      <button class="btn add-cart">Customize & Add</button>
     </div>
   </div>
+</section>
 
-  <!-- FOOTER -->
+<!-- FOOTER -->
 <footer class="footer">
   <div class="footer-container">
-    
-    <!-- About Us -->
     <div class="footer-about">
       <h4>About PizzaX</h4>
       <p>Fresh, stone-baked pizzas crafted with premium ingredients and delivered fast.</p>
       <p>Owner:- Suraj Sharma </p>
     </div>
 
-    <!-- Instagram Feed -->
     <div class="footer-insta">
       <h4>Instagram Feed</h4>
       <div class="insta-grid">
@@ -159,14 +148,13 @@
         <img src="images/offer2.jpg" alt="Insta 2">
         <img src="images/offer3.jpg" alt="Insta 3">
         <img src="images/pizza10.jpg" alt="Insta 4">
-        <img src="images/pizza5.jpg" alt="Insta 4">
-        <img src="images/pizza3.jpg" alt="Insta 4">
-        <img src="images/pizza2.jpg" alt="Insta 4">
-        <img src="images/pizza1.jpg" alt="Insta 4">
+        <img src="images/pizza5.jpg" alt="Insta 5">
+        <img src="images/pizza3.jpg" alt="Insta 6">
+        <img src="images/pizza2.jpg" alt="Insta 7">
+        <img src="images/pizza1.jpg" alt="Insta 8">
       </div>
     </div>
 
-    <!-- Social Icons -->
     <div class="footer-social">
       <h4>Follow Us</h4>
       <div class="social-icons">
@@ -175,17 +163,14 @@
         <a href="#" target="_blank"><img src="images/twitter.png" alt="Twitter"></a>
       </div>
     </div>
-    
   </div>
 
-
-  <!-- Footer Bottom -->
   <div class="footer-bottom">
     © 2025 PizzaX. All rights reserved.
   </div>
 </footer>
 
-  <script src="js/main.js"></script>
-  <script src="js/menu.js"></script>
+<script src="js/main.js"></script>
+<script src="js/menu.js"></script>
 </body>
 </html>

@@ -9,25 +9,32 @@
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <header class="navbar">
-    <div class="logo">🍕 PizzaX</div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="menu.html">Menu</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="login.html" class="active">Login</a></li>
-        <li><a href="cart.html" class="cart-btn">🛒 Cart</a></li>
-      </ul>
-      </nav>
-      <div class="nav-actions">
-        <a href="user.html" class="icon-btn" aria-label="User">👤</a>
-      </div>
-    </div>
-  </header>
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="logo">🍕 PizzaX</div>
+
+  <!-- Right Side Icons -->
+  <div class="navbar-icons">
+    <a href="search.html" class="icon-btn" aria-label="Search">🔍</a>
+    <a href="cart.html" class="icon-btn" aria-label="Cart">🛒</a>
+    <button id="menu-toggle" class="icon-btn" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<!-- SIDE MENU -->
+<div class="side-menu">
+  <span class="close-btn">&times;</span>
+  <ul>
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="menu.html">Menu</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="login.html">Login</a></li>
+    <li><a href="register.html">Register</a></li>
+    <li><a href="user.html">👤 Profile</a></li>
+  </ul>
+</div>
 
 
   <!-- BLOG SECTION -->
@@ -52,10 +59,34 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2025 PizzaX. All rights reserved.</p>
-  </footer>
+ <!-- FOOTER same as login page -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-about">
+      <h4>About PizzaX</h4>
+      <p>Fresh, stone-baked pizzas crafted with premium ingredients and delivered fast.</p>
+      <p>Owner:- Suraj Sharma</p>
+    </div>
+    <div class="footer-insta">
+      <h4>Instagram Feed</h4>
+      <div class="insta-grid">
+        <img src="images/offer1.jpg" alt="Insta 1">
+        <img src="images/offer2.jpg" alt="Insta 2">
+        <img src="images/offer3.jpg" alt="Insta 3">
+        <img src="images/pizza10.jpg" alt="Insta 4">
+      </div>
+    </div>
+    <div class="footer-social">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+        <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2025 PizzaX. All rights reserved.</div>
+</footer>
 
   <script src="js/main.js"></script>
 </body>

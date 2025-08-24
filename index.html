@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <a href="#"><svg width="24" height="24" viewBox="0 0 24 24"><path d="..."/></svg></a>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>PizzaX - Home</title>
@@ -10,30 +9,49 @@
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <header class="navbar">
-    <div class="logo">🍕 PizzaX</div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="menu.html">Menu</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="login.html" class="active">Login</a></li>
-        <li><a href="cart.html" class="cart-btn">🛒 Cart</a></li>
-      </ul>
-      </nav>
-      <div class="nav-actions">
-        <a href="user.html" class="icon-btn" aria-label="User">👤</a>
-      </div>
-    </div>
-  </header>
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="logo">🍕 PizzaX</div>
 
-  <!-- HERO (bg image + overlay + text on top) -->
+  <!-- Right Side Icons -->
+  <div class="navbar-icons">
+    <!-- Search button opens modal -->
+    <button id="search-btn" class="icon-btn" aria-label="Search">🔍</button>
+    <a href="cart.html" class="icon-btn" aria-label="Cart">🛒</a>
+    <button id="menu-toggle" class="icon-btn" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<!-- SIDE MENU -->
+<div class="side-menu">
+  <span class="close-btn">&times;</span>
+  <ul>
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="menu.html">Menu</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="login.html">Login</a></li>
+    <li><a href="register.html">Register</a></li>
+    <li><a href="user.html">👤 Profile</a></li>
+  </ul>
+</div>
+
+<!-- SEARCH MODAL -->
+<div id="search-modal" class="search-modal">
+  <div class="search-content">
+    <span id="close-search" class="close-btn">&times;</span>
+    <h3>Search Pizza</h3>
+    <input type="text" id="search-input" placeholder="Type pizza name..." />
+    <button class="btn" onclick="document.getElementById('search-input').dispatchEvent(new KeyboardEvent('keypress',{'key':'Enter'}))">Search</button>
+  </div>
+</div>
+
+
+
+  <!-- HERO -->
   <section class="hero" aria-label="PizzaX Hero">
     <div class="hero-overlay"></div>
-    <!-- 👇 yaha apni BG image ka path set karo (CSS me) -->
     <div class="hero-content container">
       <div class="hero-copy">
         <h1><span>Hot. Fresh. </span>Delicious Pizza.</h1>
@@ -52,7 +70,6 @@
     <div class="slider">
       <button class="slide-btn prev" aria-label="Previous">‹</button>
       <div class="track" id="pizzaTrack">
-        <!-- 10 items for smooth slide -->
         <div class="chip"><img src="images/pizza1.jpg" alt="Pizza 1"><span>Margherita</span></div>
         <div class="chip"><img src="images/pizza2.jpg" alt="Pizza 2"><span>Pepperoni</span></div>
         <div class="chip"><img src="images/pizza3.jpg" alt="Pizza 3"><span>Veggie</span></div>
@@ -122,150 +139,140 @@
     </div>
   </section>
 
-<!-- OFFERS -->
-<section class="offers" aria-label="Special Offers">
-  <div class="container">
-    <h2 class="section-title">Special Offers</h2>
-    <div class="grid">
-      <div class="offer-card">
-        <img src="images/offer1.jpg" alt="Buy 1 Get 1" class="offer-img">
-        <h3>Buy 1 Get 1</h3>
-        <p>On Margherita every Friday.</p>
-        <a href="menu.html" class="btn sm">Grab Deal</a>
-      </div>
-      <div class="offer-card">
-        <img src="images/offer2.jpg" alt="50% OFF" class="offer-img">
-        <h3>50% OFF</h3>
-        <p>Pepperoni all weekend long.</p>
-        <a href="menu.html" class="btn sm">Grab Deal</a>
-      </div>
-      <div class="offer-card">
-        <img src="images/offer3.jpg" alt="Combo @ ₹599" class="offer-img">
-        <h3>Combo @ ₹599</h3>
-        <p>Medium Pizza + Garlic Bread + Drink.</p>
-        <a href="menu.html" class="btn sm">Grab Deal</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-<!-- TESTIMONIALS -->
-<section class="testimonials container" aria-label="Reviews">
-  <h2 class="section-title">What Our Customers Say</h2>
-  <div class="t-grid">
-    <div class="t-card">
-      <div class="t-img">
-        <img src="images/suraj.jpg" alt="Aditi">
-      </div>
-      <p>“Fast delivery and amazing taste! My go-to pizza place.”</p>
-      <span>— Suraj</span>
-    </div>
-    <div class="t-card">
-      <div class="t-img">
-        <img src="images/ashish.webp" alt="Rohan">
-      </div>
-      <p>“Cheese burst was insane. Loved the crust!”</p>
-      <span>— Ashish</span>
-    </div>
-    <div class="t-card">
-      <div class="t-img">
-        <img src="images/sumit.jpg" alt="Meera">
-      </div>
-      <p>“Fresh toppings, perfect spice. Highly recommended.”</p>
-      <span>— Sumit</span>
-    </div>
-  </div>
-</section>
-
-
-<!-- NEWSLETTER -->
-<section class="newsletter" aria-label="Subscribe">
-  <div class="container n-wrap">
-    <div class="n-copy">
-      <h3>Get exclusive deals in your inbox</h3>
-      <p>Subscribe to never miss offers and new launches.</p>
-    </div>
-    <form id="newsletter-form" class="n-form">
-      <input type="email" placeholder="Enter your email" required />
-      <button type="submit" class="btn subscribe-btn">Subscribe</button>
-    </form>
-  </div>
-</section>
-
-
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="footer-container">
-    
-    <!-- About Us -->
-    <div class="footer-about">
-      <h4>About PizzaX</h4>
-      <p>Fresh, stone-baked pizzas crafted with premium ingredients and delivered fast.</p>
-      <p>Owner:- Suraj Sharma </p>
-    </div>
-
-    <!-- Instagram Feed -->
-    <div class="footer-insta">
-      <h4>Instagram Feed</h4>
-      <div class="insta-grid">
-        <img src="images/offer1.jpg" alt="Insta 1">
-        <img src="images/offer2.jpg" alt="Insta 2">
-        <img src="images/offer3.jpg" alt="Insta 3">
-        <img src="images/pizza10.jpg" alt="Insta 4">
-        <img src="images/pizza5.jpg" alt="Insta 4">
-        <img src="images/pizza3.jpg" alt="Insta 4">
-        <img src="images/pizza2.jpg" alt="Insta 4">
-        <img src="images/pizza1.jpg" alt="Insta 4">
+  <!-- OFFERS -->
+  <section class="offers" aria-label="Special Offers">
+    <div class="container">
+      <h2 class="section-title">Special Offers</h2>
+      <div class="grid">
+        <div class="offer-card">
+          <img src="images/offer1.jpg" alt="Buy 1 Get 1" class="offer-img">
+          <h3>Buy 1 Get 1</h3>
+          <p>On Margherita every Friday.</p>
+          <a href="menu.html" class="btn sm">Grab Deal</a>
+        </div>
+        <div class="offer-card">
+          <img src="images/offer2.jpg" alt="50% OFF" class="offer-img">
+          <h3>50% OFF</h3>
+          <p>Pepperoni all weekend long.</p>
+          <a href="menu.html" class="btn sm">Grab Deal</a>
+        </div>
+        <div class="offer-card">
+          <img src="images/offer3.jpg" alt="Combo @ ₹599" class="offer-img">
+          <h3>Combo @ ₹599</h3>
+          <p>Medium Pizza + Garlic Bread + Drink.</p>
+          <a href="menu.html" class="btn sm">Grab Deal</a>
+        </div>
       </div>
     </div>
+  </section>
 
-    <!-- Social Icons -->
-    <div class="footer-social">
-      <h4>Follow Us</h4>
-      <div class="social-icons">
-        <a href="#" target="_blank"><img src="images/instagram.png" alt="Instagram"></a>
-        <a href="#" target="_blank"><img src="images/facebook.png" alt="Facebook"></a>
-        <a href="#" target="_blank"><img src="images/twitter.png" alt="Twitter"></a>
+  <!-- TESTIMONIALS -->
+  <section class="testimonials container" aria-label="Reviews">
+    <h2 class="section-title">What Our Customers Say</h2>
+    <div class="t-grid">
+      <div class="t-card">
+        <div class="t-img">
+          <img src="images/suraj.jpg" alt="Suraj">
+        </div>
+        <p>“Fast delivery and amazing taste! My go-to pizza place.”</p>
+        <span>— Suraj</span>
+      </div>
+      <div class="t-card">
+        <div class="t-img">
+          <img src="images/ashish.webp" alt="Ashish">
+        </div>
+        <p>“Cheese burst was insane. Loved the crust!”</p>
+        <span>— Ashish</span>
+      </div>
+      <div class="t-card">
+        <div class="t-img">
+          <img src="images/sumit.jpg" alt="Sumit">
+        </div>
+        <p>“Fresh toppings, perfect spice. Highly recommended.”</p>
+        <span>— Sumit</span>
       </div>
     </div>
-    
-  </div>
+  </section>
 
+  <!-- NEWSLETTER -->
+  <section class="newsletter" aria-label="Subscribe">
+    <div class="container n-wrap">
+      <div class="n-copy">
+        <h3>Get exclusive deals in your inbox</h3>
+        <p>Subscribe to never miss offers and new launches.</p>
+      </div>
+      <form id="newsletter-form" class="n-form">
+        <input type="email" placeholder="Enter your email" required />
+        <button type="submit" class="btn subscribe-btn">Subscribe</button>
+      </form>
+    </div>
+  </section>
 
-  <!-- Footer Bottom -->
-  <div class="footer-bottom">
-    © 2025 PizzaX. All rights reserved.
-  </div>
-</footer>
-
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-about">
+        <h4>About PizzaX</h4>
+        <p>Fresh, stone-baked pizzas crafted with premium ingredients and delivered fast.</p>
+        <p>Owner:- Suraj Sharma </p>
+      </div>
+      <div class="footer-insta">
+        <h4>Instagram Feed</h4>
+        <div class="insta-grid">
+          <img src="images/offer1.jpg" alt="Insta 1">
+          <img src="images/offer2.jpg" alt="Insta 2">
+          <img src="images/offer3.jpg" alt="Insta 3">
+          <img src="images/pizza10.jpg" alt="Insta 4">
+          <img src="images/pizza5.jpg" alt="Insta 5">
+          <img src="images/pizza3.jpg" alt="Insta 6">
+          <img src="images/pizza2.jpg" alt="Insta 7">
+          <img src="images/pizza1.jpg" alt="Insta 8">
+        </div>
+      </div>
+      <div class="footer-social">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+          <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+          <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2025 PizzaX. All rights reserved.
+    </div>
+  </footer>
 
   <!-- SCRIPTS -->
   <script src="js/main.js"></script>
   <script>
-    // Navbar shadow on scroll
+    // Navbar scroll shadow
     const navbar = document.querySelector('.navbar');
     window.addEventListener('scroll', () => {
       if (window.scrollY > 10) navbar.classList.add('scrolled');
       else navbar.classList.remove('scrolled');
     });
 
-    // Simple horizontal slider
+    // Mobile menu toggle
+    const toggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+
+    // Slider
     const track = document.getElementById('pizzaTrack');
     const prev = document.querySelector('.slide-btn.prev');
     const next = document.querySelector('.slide-btn.next');
-
     const scrollByAmount = () => track.clientWidth * 0.6;
     prev.addEventListener('click', () => track.scrollBy({ left: -scrollByAmount(), behavior: 'smooth' }));
-    next.addEventListener('click', () => track.scrollBy({ left:  scrollByAmount(), behavior: 'smooth' }));
+    next.addEventListener('click', () => track.scrollBy({ left: scrollByAmount(), behavior: 'smooth' }));
 
-    // Auto-scroll (optional)
     let auto = setInterval(() => { track.scrollBy({ left: 220, behavior: 'smooth' }); }, 3000);
     track.addEventListener('mouseenter', () => clearInterval(auto));
     track.addEventListener('mouseleave', () => { auto = setInterval(() => track.scrollBy({ left: 220, behavior: 'smooth' }), 3000); });
 
-    // Newsletter dummy submit
+    // Newsletter dummy
     document.getElementById('newsletter-form').addEventListener('submit', (e) => {
       e.preventDefault();
       alert('Thanks for subscribing!');

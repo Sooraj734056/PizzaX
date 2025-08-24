@@ -1,13 +1,118 @@
-.about-section {
-  max-width: 800px;
-  margin: 50px auto;
-  padding: 0 20px;
+/* HERO */
+.about-hero {
+  position: relative;
+  height: 300px;
+  background: url('../images/hero-pizza.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
   text-align: center;
 }
-.about-section p {
+.about-hero .hero-overlay {
+  position: absolute;
+  top:0; left:0; right:0; bottom:0;
+  background: rgba(0,0,0,0.5);
+}
+.about-hero .hero-content {
+  position: relative;
+  z-index: 2;
+}
+.about-hero h1 { font-size: 2.5rem; }
+.about-hero p { font-size: 1.2rem; margin-top: 10px; }
+
+.about-details {
+  display: flex;
+  gap: 40px;             /* text aur image ke beech space */
+  margin: 50px 20px;
+  align-items: flex-start;  /* text aur image top aligned */
+  flex-wrap: wrap;
+}
+
+.about-details .about-text {
+  flex: 1;
+  min-width: 250px;
   font-size: 1.1rem;
-  line-height: 1.8;
-  margin-top: 20px;
+  line-height: 1.6;
+}
+
+.about-details .about-image {
+  flex: 1;
+  display: flex;
+  justify-content: center; /* image center align */
+}
+
+.about-details .about-image img {
+  width: 100%;
+  max-width: 300px;      /* image ko chhota aur proportional rakha */
+  height: auto;
+  border-radius: 15px;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4); /* subtle depth */
+  transition: transform 0.3s;
+}
+
+.about-details .about-image img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media(max-width:768px){
+  .about-details {
+    flex-direction: column;  /* mobile me upar text, niche image */
+    align-items: center;
+  }
+  .about-details .about-text, 
+  .about-details .about-image {
+    flex: unset;
+    width: 90%;
+  }
+  .about-details .about-image img {
+    max-width: 80%;
+  }
+}
+
+/* MISSION / VALUES */
+.mission-values {
+  text-align: center;
+  margin: 50px 0;
+}
+.values-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.value-card {
+  background: #222;
+  padding: 20px;
+  border-radius: 15px;
+  width: 250px;
+}
+.value-card h3 { color: #FFD700; margin-bottom: 10px; }
+
+/* CHEF TEAM */
+.chef-team { text-align: center; margin: 50px 0; }
+.chefs-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.chef-card {
+  background: #222;
+  border-radius: 15px;
+  padding: 15px;
+  width: 200px;
+  text-align: center;
+}
+.chef-card img { width: 100%; border-radius: 15px; margin-bottom: 10px; }
+
+/* Responsive */
+@media(max-width:768px){
+  .about-details { flex-direction: column; }
+  .values-grid, .chefs-grid { flex-direction: column; }
+  .chef-card, .value-card { width: 90%; }
 }
 /* Footer Container */
 .footer-container {

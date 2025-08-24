@@ -30,76 +30,118 @@ body{ background: var(--bg); color: var(--text); }
 .link{ color: var(--muted); text-decoration:none }
 .link:hover{ color: var(--text) }
 
-/* NAVBAR */
+/* ---------------------------
+   NAVBAR
+--------------------------- */
 .navbar {
-  position: fixed; 
-  top: 0; 
-  left: 0; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: transparent;
+  position: fixed;
+  top: 0;
   width: 100%;
-  z-index: 100; 
-  backdrop-filter: blur(10px);
-  background: rgba(10,10,14,0.4); 
-  border-bottom: 1px solid rgba(255,255,255,0.06);
-  transition: .25s background, .25s box-shadow;
+  z-index: 999;
+  transition: all 0.3s ease;
 }
 
-.navbar.scrolled { 
-  background: rgba(10,10,14,0.75); 
-  box-shadow: var(--shadow); 
+.navbar.sticky {
+  background: rgba(17, 17, 17, 0.95);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
 }
 
-.nav-inner { 
-  display: flex; 
-  align-items: center; 
-  justify-content: space-between; 
-  gap: 16px; 
-  padding: 14px 20px;
+.navbar .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #FFD700;
 }
 
-.logo { 
-  font-weight: 800; 
-  font-size: 1.2rem; 
+/* Navbar icons (Search, Cart, Menu Toggle) */
+.navbar-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
-.nav-links { 
-  list-style: none; 
-  display: flex; 
-  gap: 22px; 
-  padding: 0; 
-  margin: 0; 
-  margin-right: auto;   /* 👈 yaha se links left side chale jayenge */
+.icon-btn {
+  font-size: 1.2rem;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s;
+  text-decoration: none;
+}
+.icon-btn:hover {
+  color: #FFD700;
 }
 
-.nav-links a { 
-  color: #e9eef6; 
-  text-decoration: none; 
-  font-weight: 500; 
-  opacity: .9; 
+/* ---------------------------
+   SIDE MENU
+--------------------------- */
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: -260px;
+  width: 260px;
+  height: 100%;
+  background: #111;
+  box-shadow: -4px 0 15px rgba(0,0,0,0.5);
+  transition: right 0.3s ease;
+  padding: 20px;
+  z-index: 1000;
 }
 
-.nav-links a:hover,
-.nav-links a.active { 
-  color: var(--accent); 
+.side-menu.active {
+  right: 0;
 }
 
-.nav-actions { 
-  display: flex; 
-  align-items: center; 
-  gap: 10px; 
+.side-menu .close-btn {
+  font-size: 2rem;
+  color: #FFD700;
+  cursor: pointer;
+  display: block;
+  text-align: right;
+  margin-bottom: 20px;
 }
 
-.icon-btn { 
-  color: #fff; 
-  text-decoration: none; 
-  font-size: 1.1rem; 
-  padding: 8px 10px; 
-  border-radius: 10px; 
-  background: transparent; 
+.side-menu ul {
+  list-style: none;
+  padding: 0;
 }
 
-.icon-btn:hover { 
-  background: rgba(255,255,255,0.08); 
+.side-menu ul li {
+  margin: 15px 0;
 }
+
+.side-menu ul li a {
+  color: #fff;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.side-menu ul li a:hover,
+.side-menu ul li a.active {
+  color: #FFD700;
+}
+
+/* ---------------------------
+   RESPONSIVE
+--------------------------- */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 12px 20px;
+  }
+  .navbar .logo {
+    font-size: 1.5rem;
+  }
+  .icon-btn {
+    font-size: 1.5rem;
+  }
+}
+
 
 
 
