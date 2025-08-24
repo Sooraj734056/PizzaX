@@ -47,7 +47,24 @@ document.addEventListener("DOMContentLoaded", () => {
       link.addEventListener("click", () => sideMenu.classList.remove("active"));
     });
   }
+// Code for main.js to handle Menu Toggle
+document.addEventListener("DOMContentLoaded", () => {
+  const menuToggle = document.getElementById('menu-toggle');
+  const sideMenu = document.querySelector('.side-menu');
+  const closeBtn = document.querySelector('.close-btn');
 
+  if (menuToggle && sideMenu) {
+    menuToggle.addEventListener('click', () => {
+      sideMenu.style.width = '250px';
+    });
+  }
+
+  if (closeBtn && sideMenu) {
+    closeBtn.addEventListener('click', () => {
+      sideMenu.style.width = '0';
+    });
+  }
+});
   // ---------------------------
   // Search Modal
   // ---------------------------
